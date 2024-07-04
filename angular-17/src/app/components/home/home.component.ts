@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
-import { DropdownModule } from 'primeng/dropdown';
+import { DropdownChangeEvent, DropdownModule } from 'primeng/dropdown';
 
 interface City {
   name: string;
@@ -30,7 +30,15 @@ export class HomeComponent {
     ];
   }
 
-  selectCustom(): void {
+  changedDropdown(event: DropdownChangeEvent): void {
+    console.log('event', event);
+  }
+
+  selectFirst(): void {
     this.selectedCity = this.cities[0];
+  }
+
+  printCurrent(): void {
+    console.log('this.selectedCity', this.selectedCity);
   }
 }

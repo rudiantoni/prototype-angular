@@ -1,10 +1,12 @@
-<p>home works!</p>
+<h1>Angular 17</h1>
 
-<p-button (onClick)="selectCustom()">Select custom</p-button>
+<p-button (onClick)="selectFirst()">Select first</p-button>
+
+<p-button (onClick)="printCurrent()">Print selected</p-button>
 
 <p-dropdown
+  (onChange)="changedDropdown($event)"
   [options]="cities"
   [(ngModel)]="selectedCity"
   optionLabel="name"
-  placeholder="Select a City"
 />
