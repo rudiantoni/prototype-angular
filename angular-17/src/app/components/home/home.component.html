@@ -1,12 +1,45 @@
 <h1>Angular 17</h1>
 
-<p-button (onClick)="selectFirst()">Select first</p-button>
+<p>Always check the developer console!!!</p>
+
+<p>
+  PrimeNG Dropdown (p-dropdown) behavior check using [(ngModel)] only
+</p>
+
+<p>
+  <p-button (onClick)="selectFirst()">Select first</p-button>
+  <p-button (onClick)="selectLast()">Select last</p-button>
+  <p-button (onClick)="selectRandom(false)">Select random (valid only)</p-button>
+</p>
+
+<p>
+  <p-button (onClick)="selectNonExistent()">Select non existent</p-button>
+  <p-button (onClick)="selectNull()">Select null</p-button>
+  <p-button (onClick)="selectUndefined()">Select undefined</p-button>
+  <p-button (onClick)="selectRandom(true)">Select random (with invalid)</p-button>
+</p>
 
 <p-button (onClick)="printCurrent()">Print selected</p-button>
 
-<p-dropdown
-  (onChange)="changedDropdown($event)"
-  [options]="cities"
-  [(ngModel)]="selectedCity"
-  optionLabel="name"
-/>
+<hr />
+
+<p>
+  <span>Using object as ngModel from list of objects in options</span>
+  <p-dropdown
+    (onChange)="changedDropdown($event)"
+    [options]="cities"
+    [(ngModel)]="selectedCity"
+    optionLabel="name"
+  ></p-dropdown>
+</p>
+
+<p>
+  <span>Using literal value as ngModel from list of objects in options</span>
+  <p-dropdown
+    (onChange)="changedDropdownA($event)"
+    [options]="cities"
+    [(ngModel)]="selectedCityCode"
+    optionLabel="name"
+    optionValue="code"
+  ></p-dropdown>
+</p>
