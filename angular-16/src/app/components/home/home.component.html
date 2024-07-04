@@ -1,1 +1,7 @@
-<p>home works!</p>
+<p-button (onClick)="selectCustom()">Select custom</p-button>
+<p-button (onClick)="printCurrent()">Print selected</p-button>
+<p-dropdown
+  [options]="cities"
+  [(ngModel)]="selectedCity"
+  optionLabel="name"
+></p-dropdown>
