@@ -1,7 +1,7 @@
-<p-button (onClick)="selectCustom()">Select custom</p-button>
+<h1>Angular 16</h1>
+
+<p-button (onClick)="selectFirst()">Select first</p-button>
+
 <p-button (onClick)="printCurrent()">Print selected</p-button>
-<p-dropdown
-  [options]="cities"
-  [(ngModel)]="selectedCity"
-  optionLabel="name"
-></p-dropdown>
+
+<p-dropdown (onChange)="changedDropdown($event)" [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown>
