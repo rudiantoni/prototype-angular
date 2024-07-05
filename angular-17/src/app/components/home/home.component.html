@@ -3,6 +3,14 @@
 <p>Always check the developer console!!!</p>
 
 <p>
+  Custom select from PrimeNG Dropdown (p-dropdown)
+</p>
+
+<m-select [options]="cities" optionLabel="name" (onChange)="changedDropdown($event)" [(ngModel)]="selectedCity"></m-select>
+
+<hr />
+
+<p>
   PrimeNG Dropdown (p-dropdown) behavior check using [(ngModel)] only
 </p>
 
@@ -43,3 +51,4 @@
     optionValue="code"
   ></p-dropdown>
 </p>
+

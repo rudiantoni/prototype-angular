@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { DropdownChangeEvent, DropdownModule } from 'primeng/dropdown';
+import { MSelectComponent } from '../input/m-select/m-select.component';
 
 interface ICity {
   name: string;
@@ -11,7 +12,7 @@ interface ICity {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ButtonModule, DropdownModule, FormsModule],
+  imports: [ButtonModule, DropdownModule, FormsModule, MSelectComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -25,11 +26,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.cities = [
-      { name: 'New York', code: 'NY' },
-      { name: 'Rome', code: 'RM' },
-      { name: 'London', code: 'LDN' },
-      { name: 'Istanbul', code: 'IST' },
-      { name: 'Paris', code: 'PRS' },
+      { name: 'New York', code: 'NY' } as any,
+      { name: 'Rome', code: 'RM' } as any,
+      { name: 'London', code: 'LDN' } as any,
+      { name: 'Istanbul', code: 'IST' } as any,
+      { name: 'Paris', code: 'PRS' } as any,
     ];
   }
 
